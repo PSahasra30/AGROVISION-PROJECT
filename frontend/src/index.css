@@ -1,0 +1,64 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:sans-serif;
+background:#021e1a;
+}
+
+/* Layout */
+
+.app{
+display:flex;
+min-height:100vh;
+}
+
+/* Main area when sidebar exists */
+
+.main{
+margin-left:230px;
+width:calc(100% - 230px);
+display:flex;
+flex-direction:column;
+}
+
+/* Navbar space */
+
+/* .content{
+margin-top:70px;
+padding:30px;
+} */
+
+.content {
+  margin-top: 70px;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+  padding: 30px;
+}
+
+/* Landing page */
+
+.full{
+width:100%;
+}
+
+.landing-content{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* html, body {
+  height: 100%;
+  overflow: hidden;
+} */
+
+
+@keyframes scan {
+  0% { top: 0; }
+  100% { top: 100%; }
+}

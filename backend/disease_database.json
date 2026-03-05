@@ -1,0 +1,576 @@
+{
+  "Apple___Apple_scab": {
+    "en": {
+      "description": "Apple scab is a fungal disease causing dark lesions on leaves and fruits.",
+      "prevention": "Ensure proper pruning and good air circulation.",
+      "treatment": "Apply fungicides like Captan or Mancozeb.",
+      "organic": "Use neem oil spray and remove infected leaves."
+    },
+    "te": {
+      "description": "ఆపిల్ స్కాబ్ అనేది శిలీంద్ర వ్యాధి, ఆకులు మరియు పండ్లపై మచ్చలు కలుగుతాయి.",
+      "prevention": "సరైన కత్తిరింపు మరియు గాలి ప్రసరణ ఉండాలి.",
+      "treatment": "కాప్టాన్ లేదా మాంకోజెబ్ వాడాలి.",
+      "organic": "నీమ ఆయిల్ స్ప్రే చేయాలి."
+    }
+  },
+
+  "Apple___Black_rot": {
+    "en": {
+      "description": "Black rot causes circular brown lesions on apple fruits and leaves.",
+      "prevention": "Remove mummified fruits and prune infected branches.",
+      "treatment": "Apply protective fungicides early.",
+      "organic": "Use compost tea spray."
+    },
+    "te": {
+      "description": "బ్లాక్ రాట్ ఆపిల్ పండ్లపై గోధుమ మచ్చలు కలిగిస్తుంది.",
+      "prevention": "సోకిన పండ్లు తొలగించాలి.",
+      "treatment": "శిలీంద్రనాశకాలు వాడాలి.",
+      "organic": "కంపోస్ట్ టీ స్ప్రే చేయాలి."
+    }
+  },
+
+  "Apple___Cedar_apple_rust": {
+    "en": {
+      "description": "A fungal disease forming orange spots on apple leaves.",
+      "prevention": "Avoid planting near cedar trees.",
+      "treatment": "Apply fungicide sprays.",
+      "organic": "Neem oil application."
+    },
+    "te": {
+      "description": "ఆకులపై నారింజ రంగు మచ్చలు కనిపిస్తాయి.",
+      "prevention": "సీడార్ చెట్ల దగ్గర నాటకూడదు.",
+      "treatment": "శిలీంద్రనాశకాలు వాడాలి.",
+      "organic": "నీమ ఆయిల్ వాడాలి."
+    }
+  },
+
+  "Apple___healthy": {
+    "en": {
+      "description": "The apple plant is healthy with no disease detected.",
+      "prevention": "Maintain regular monitoring and good farming practices.",
+      "treatment": "No treatment required.",
+      "organic": "Continue organic soil enrichment."
+    },
+    "te": {
+      "description": "ఆపిల్ మొక్క ఆరోగ్యంగా ఉంది.",
+      "prevention": "సాధారణ పరిశుభ్రత పాటించాలి.",
+      "treatment": "చికిత్స అవసరం లేదు.",
+      "organic": "సేంద్రియ ఎరువులు వాడాలి."
+    }
+  }
+
+  ,
+  "Blueberry___healthy": {
+    "en": {
+      "description": "Blueberry plant is healthy with no visible disease symptoms.",
+      "prevention": "Maintain proper irrigation and soil acidity.",
+      "treatment": "No treatment required.",
+      "organic": "Use organic compost to maintain soil nutrients."
+    },
+    "te": {
+      "description": "బ్లూబెర్రీ మొక్క ఆరోగ్యంగా ఉంది.",
+      "prevention": "సరైన నీటిపారుదల మరియు మట్టి ఆమ్లత్వం ఉండాలి.",
+      "treatment": "చికిత్స అవసరం లేదు.",
+      "organic": "సేంద్రియ ఎరువులు వాడాలి."
+    }
+  },
+
+  "Cherry_(including_sour)___Powdery_mildew": {
+    "en": {
+      "description": "Powdery mildew causes white powder-like growth on leaves and shoots.",
+      "prevention": "Ensure proper air circulation.",
+      "treatment": "Apply sulfur-based fungicides.",
+      "organic": "Use neem oil weekly."
+    },
+    "te": {
+      "description": "పౌడరీ మిల్డ్యూ ఆకులపై తెల్లటి పొడి మచ్చలు కలిగిస్తుంది.",
+      "prevention": "గాలి ప్రసరణ ఉండాలి.",
+      "treatment": "సల్ఫర్ ఆధారిత శిలీంద్రనాశకాలు వాడాలి.",
+      "organic": "నీమ ఆయిల్ వాడాలి."
+    }
+  },
+
+  "Cherry_(including_sour)___healthy": {
+    "en": {
+      "description": "Cherry plant is healthy.",
+      "prevention": "Maintain regular crop monitoring.",
+      "treatment": "No treatment required.",
+      "organic": "Maintain organic soil health."
+    },
+    "te": {
+      "description": "చెర్రీ మొక్క ఆరోగ్యంగా ఉంది.",
+      "prevention": "సాధారణ పరిశుభ్రత పాటించాలి.",
+      "treatment": "చికిత్స అవసరం లేదు.",
+      "organic": "సేంద్రియ ఎరువులు వాడాలి."
+    }
+  },
+
+  "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+    "en": {
+      "description": "Gray leaf spot causes rectangular gray lesions on corn leaves.",
+      "prevention": "Rotate crops and avoid excessive moisture.",
+      "treatment": "Apply fungicides early.",
+      "organic": "Remove infected debris."
+    },
+    "te": {
+      "description": "మొక్కజొన్న ఆకులపై గోధుమ మచ్చలు కనిపిస్తాయి.",
+      "prevention": "పంట మార్పిడి చేయాలి.",
+      "treatment": "శిలీంద్రనాశకాలు వాడాలి.",
+      "organic": "సోకిన భాగాలను తొలగించాలి."
+    }
+  },
+
+  "Corn_(maize)___Common_rust_": {
+    "en": {
+      "description": "Common rust appears as reddish pustules on leaves.",
+      "prevention": "Use resistant varieties.",
+      "treatment": "Apply fungicides if severe.",
+      "organic": "Maintain proper field hygiene."
+    },
+    "te": {
+      "description": "ఆకులపై ఎరుపు మచ్చలు కనిపిస్తాయి.",
+      "prevention": "రోగనిరోధక రకాలు వాడాలి.",
+      "treatment": "తీవ్రత ఉంటే శిలీంద్రనాశకాలు వాడాలి.",
+      "organic": "పరిశుభ్రత పాటించాలి."
+    }
+  },
+
+  "Corn_(maize)___Northern_Leaf_Blight": {
+    "en": {
+      "description": "Northern leaf blight causes long gray-green lesions.",
+      "prevention": "Avoid dense planting.",
+      "treatment": "Use fungicides.",
+      "organic": "Crop rotation helps reduce infection."
+    },
+    "te": {
+      "description": "ఆకులపై పొడవైన మచ్చలు కనిపిస్తాయి.",
+      "prevention": "గాఢంగా నాటకూడదు.",
+      "treatment": "శిలీంద్రనాశకాలు వాడాలి.",
+      "organic": "పంట మార్పిడి చేయాలి."
+    }
+  },
+
+  "Corn___healthy": {
+    "en": {
+      "description": "Corn plant is healthy.",
+      "prevention": "Maintain proper irrigation.",
+      "treatment": "No treatment required.",
+      "organic": "Use compost and organic manure."
+    },
+    "te": {
+      "description": "మొక్కజొన్న మొక్క ఆరోగ్యంగా ఉంది.",
+      "prevention": "సరైన నీటిపారుదల ఉండాలి.",
+      "treatment": "చికిత్స అవసరం లేదు.",
+      "organic": "సేంద్రియ ఎరువులు వాడాలి."
+    }
+  },
+
+  "Grape___Black_rot": {
+    "en": {
+      "description": "Black rot is a fungal disease affecting grape leaves and fruits.",
+      "prevention": "Remove infected fruits and prune properly.",
+      "treatment": "Apply fungicides like Mancozeb.",
+      "organic": "Neem oil spray and sanitation."
+    },
+    "te": {
+      "description": "బ్లాక్ రాట్ ద్రాక్ష పండ్లపై శిలీంద్ర వ్యాధి.",
+      "prevention": "సోకిన పండ్లు తొలగించాలి.",
+      "treatment": "మాంకోజెబ్ వాడాలి.",
+      "organic": "నీమ ఆయిల్ వాడాలి."
+    }
+  },
+
+  "Grape___Esca_(Black_Measles)": {
+    "en": {
+      "description": "Esca causes dark streaks inside grape vines.",
+      "prevention": "Avoid pruning during wet weather.",
+      "treatment": "Remove infected vines.",
+      "organic": "Maintain field hygiene."
+    },
+    "te": {
+      "description": "ఎస్కా ద్రాక్షలో నలుపు గీతలు కలిగిస్తుంది.",
+      "prevention": "తడిగా ఉన్నప్పుడు కత్తిరింపు చేయకూడదు.",
+      "treatment": "సోకిన వేరు తొలగించాలి.",
+      "organic": "పరిశుభ్రత పాటించాలి."
+    }
+  },
+
+  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+    "en": {
+      "description": "Leaf blight causes brown circular spots on grape leaves.",
+      "prevention": "Ensure good drainage.",
+      "treatment": "Apply copper fungicides.",
+      "organic": "Neem oil spray."
+    },
+    "te": {
+      "description": "ఆకులపై గోధుమ వలయాకార మచ్చలు కనిపిస్తాయి.",
+      "prevention": "నీరు నిల్వ కాకుండా చూడాలి.",
+      "treatment": "కాపర్ శిలీంద్రనాశకాలు వాడాలి.",
+      "organic": "నీమ ఆయిల్ వాడాలి."
+    }
+  },
+
+  "Grape___healthy": {
+    "en": {
+      "description": "Grape plant is healthy.",
+      "prevention": "Maintain regular pruning and irrigation.",
+      "treatment": "No treatment required.",
+      "organic": "Organic compost application."
+    },
+    "te": {
+      "description": "ద్రాక్ష మొక్క ఆరోగ్యంగా ఉంది.",
+      "prevention": "సాధారణ సంరక్షణ చేయాలి.",
+      "treatment": "చికిత్స అవసరం లేదు.",
+      "organic": "సేంద్రియ ఎరువులు వాడాలి."
+    }
+  },
+
+  
+  "Orange___Haunglongbing_(Citrus_greening)": {
+    "en": {
+      "description": "Citrus greening is a bacterial disease causing yellow shoots and misshapen fruits.",
+      "prevention": "Control psyllid insects and remove infected trees.",
+      "treatment": "No complete cure available; manage spread.",
+      "organic": "Use neem-based insect control regularly."
+    },
+    "te": {
+      "description": "సిట్రస్ గ్రీనింగ్ వల్ల ఆకులు పసుపు రంగులో మారుతాయి మరియు పండ్లు వక్రంగా మారుతాయి.",
+      "prevention": "ప్సిల్లిడ్ పురుగులను నియంత్రించాలి.",
+      "treatment": "పూర్తి చికిత్స లేదు, వ్యాప్తిని నియంత్రించాలి.",
+      "organic": "నీమ ఆధారిత పురుగుమందులు వాడాలి."
+    }
+  },
+
+  "Peach___Bacterial_spot": {
+    "en": {
+      "description": "Bacterial spot causes dark lesions on peach leaves and fruits.",
+      "prevention": "Use disease-free planting material.",
+      "treatment": "Apply copper-based bactericides.",
+      "organic": "Neem oil spray weekly."
+    },
+    "te": {
+      "description": "పీచ్ ఆకులు మరియు పండ్లపై నలుపు మచ్చలు కనిపిస్తాయి.",
+      "prevention": "రోగరహిత నాట్లు వాడాలి.",
+      "treatment": "కాపర్ ఆధారిత మందులు వాడాలి.",
+      "organic": "నీమ ఆయిల్ స్ప్రే చేయాలి."
+    }
+  },
+
+  "Peach___healthy": {
+    "en": {
+      "description": "Peach plant is healthy.",
+      "prevention": "Maintain proper orchard sanitation.",
+      "treatment": "No treatment required.",
+      "organic": "Organic manure application."
+    },
+    "te": {
+      "description": "పీచ్ మొక్క ఆరోగ్యంగా ఉంది.",
+      "prevention": "పరిశుభ్రత పాటించాలి.",
+      "treatment": "చికిత్స అవసరం లేదు.",
+      "organic": "సేంద్రియ ఎరువులు వాడాలి."
+    }
+  },
+
+  "Pepper,_bell___Bacterial_spot": {
+    "en": {
+      "description": "Bacterial spot causes water-soaked lesions on pepper leaves and fruits.",
+      "prevention": "Avoid overhead irrigation.",
+      "treatment": "Copper-based bactericides.",
+      "organic": "Neem oil spray."
+    },
+    "te": {
+      "description": "బెల్ పెప్పర్ పై నీటి మచ్చలు కనిపిస్తాయి.",
+      "prevention": "పైనుంచి నీరు పోయకూడదు.",
+      "treatment": "కాపర్ మందులు వాడాలి.",
+      "organic": "నీమ ఆయిల్ వాడాలి."
+    }
+  },
+
+  "Pepper,_bell___healthy": {
+    "en": {
+      "description": "Bell pepper plant is healthy.",
+      "prevention": "Maintain good field hygiene.",
+      "treatment": "No treatment required.",
+      "organic": "Organic compost recommended."
+    },
+    "te": {
+      "description": "బెల్ పెప్పర్ మొక్క ఆరోగ్యంగా ఉంది.",
+      "prevention": "పరిశుభ్రత పాటించాలి.",
+      "treatment": "చికిత్స అవసరం లేదు.",
+      "organic": "సేంద్రియ ఎరువులు వాడాలి."
+    }
+  },
+
+  "Potato___Early_blight": {
+    "en": {
+      "description": "Early blight causes concentric rings on potato leaves.",
+      "prevention": "Crop rotation and avoid moisture stress.",
+      "treatment": "Apply fungicides like Chlorothalonil.",
+      "organic": "Neem oil spray."
+    },
+    "te": {
+      "description": "బంగాళాదుంప ఆకులపై వలయాకార మచ్చలు కనిపిస్తాయి.",
+      "prevention": "పంట మార్పిడి చేయాలి.",
+      "treatment": "శిలీంద్రనాశకాలు వాడాలి.",
+      "organic": "నీమ ఆయిల్ వాడాలి."
+    }
+  },
+
+  "Potato___Late_blight": {
+    "en": {
+      "description": "Late blight causes dark lesions and rapid crop damage.",
+      "prevention": "Avoid excessive irrigation.",
+      "treatment": "Apply systemic fungicides.",
+      "organic": "Remove infected plants immediately."
+    },
+    "te": {
+      "description": "లేట్ బ్లైట్ వల్ల తీవ్రమైన నష్టం కలుగుతుంది.",
+      "prevention": "అధిక నీటిపారుదల నివారించాలి.",
+      "treatment": "శిలీంద్రనాశకాలు వాడాలి.",
+      "organic": "సోకిన మొక్కలు తొలగించాలి."
+    }
+  },
+
+  "Potato___healthy": {
+    "en": {
+      "description": "Potato plant is healthy.",
+      "prevention": "Maintain balanced fertilization.",
+      "treatment": "No treatment required.",
+      "organic": "Use compost."
+    },
+    "te": {
+      "description": "బంగాళాదుంప మొక్క ఆరోగ్యంగా ఉంది.",
+      "prevention": "సరైన ఎరువులు వాడాలి.",
+      "treatment": "చికిత్స అవసరం లేదు.",
+      "organic": "కంపోస్ట్ వాడాలి."
+    }
+  },
+
+  "Tomato___Late_blight": {
+    "en": {
+      "description": "Late blight causes dark patches and fruit rot.",
+      "prevention": "Ensure air circulation.",
+      "treatment": "Use Mancozeb or Chlorothalonil.",
+      "organic": "Neem oil spray weekly."
+    },
+    "te": {
+      "description": "టమాటా పండ్లపై నలుపు మచ్చలు కనిపిస్తాయి.",
+      "prevention": "గాలి ప్రసరణ ఉండాలి.",
+      "treatment": "మాంకోజెబ్ వాడాలి.",
+      "organic": "నీమ ఆయిల్ వాడాలి."
+    }
+  },
+
+  "Tomato___Early_blight": {
+    "en": {
+      "description": "Early blight causes brown concentric rings on leaves.",
+      "prevention": "Avoid overhead watering.",
+      "treatment": "Apply fungicides.",
+      "organic": "Remove infected leaves."
+    },
+    "te": {
+      "description": "ఆకులపై గోధుమ వలయాలు కనిపిస్తాయి.",
+      "prevention": "పైనుంచి నీరు పోయకూడదు.",
+      "treatment": "శిలీంద్రనాశకాలు వాడాలి.",
+      "organic": "సోకిన ఆకులు తొలగించాలి."
+    }
+  },
+
+  "Tomato___healthy": {
+    "en": {
+      "description": "Tomato plant is healthy.",
+      "prevention": "Maintain proper fertilization.",
+      "treatment": "No treatment required.",
+      "organic": "Organic compost recommended."
+    },
+    "te": {
+      "description": "టమాటా మొక్క ఆరోగ్యంగా ఉంది.",
+      "prevention": "సరైన ఎరువులు వాడాలి.",
+      "treatment": "చికిత్స అవసరం లేదు.",
+      "organic": "సేంద్రియ ఎరువులు వాడాలి."
+    }
+  },
+
+  "Raspberry___healthy": {
+    "en": {
+      "description": "Raspberry plant is healthy with no disease detected.",
+      "prevention": "Maintain good pruning and irrigation practices.",
+      "treatment": "No treatment required.",
+      "organic": "Apply compost to maintain soil fertility."
+    },
+    "te": {
+      "description": "రాస్ప్బెర్రీ మొక్క ఆరోగ్యంగా ఉంది.",
+      "prevention": "సరైన కత్తిరింపు చేయాలి.",
+      "treatment": "చికిత్స అవసరం లేదు.",
+      "organic": "సేంద్రియ ఎరువులు వాడాలి."
+    }
+  },
+
+  "Soybean___healthy": {
+    "en": {
+      "description": "Soybean crop is healthy.",
+      "prevention": "Ensure balanced fertilization.",
+      "treatment": "No treatment required.",
+      "organic": "Use organic manure."
+    },
+    "te": {
+      "description": "సోయాబీన్ పంట ఆరోగ్యంగా ఉంది.",
+      "prevention": "సరైన ఎరువులు వాడాలి.",
+      "treatment": "చికిత్స అవసరం లేదు.",
+      "organic": "సేంద్రియ ఎరువులు వాడాలి."
+    }
+  },
+
+  "Squash___Powdery_mildew": {
+    "en": {
+      "description": "Powdery mildew forms white powdery patches on squash leaves.",
+      "prevention": "Avoid overcrowding plants.",
+      "treatment": "Apply sulfur-based fungicides.",
+      "organic": "Neem oil spray weekly."
+    },
+    "te": {
+      "description": "స్క్వాష్ ఆకులపై తెల్లటి పొడి మచ్చలు కనిపిస్తాయి.",
+      "prevention": "గాఢంగా నాటకూడదు.",
+      "treatment": "సల్ఫర్ మందులు వాడాలి.",
+      "organic": "నీమ ఆయిల్ వాడాలి."
+    }
+  },
+
+  "Strawberry___Leaf_scorch": {
+    "en": {
+      "description": "Leaf scorch causes reddish-purple spots on strawberry leaves.",
+      "prevention": "Remove infected leaves promptly.",
+      "treatment": "Apply fungicides if severe.",
+      "organic": "Maintain field hygiene."
+    },
+    "te": {
+      "description": "స్ట్రాబెర్రీ ఆకులపై ఎర్రటి మచ్చలు కనిపిస్తాయి.",
+      "prevention": "సోకిన ఆకులు తొలగించాలి.",
+      "treatment": "శిలీంద్రనాశకాలు వాడాలి.",
+      "organic": "పరిశుభ్రత పాటించాలి."
+    }
+  },
+
+  "Strawberry___healthy": {
+    "en": {
+      "description": "Strawberry plant is healthy.",
+      "prevention": "Maintain proper irrigation and nutrition.",
+      "treatment": "No treatment required.",
+      "organic": "Use compost regularly."
+    },
+    "te": {
+      "description": "స్ట్రాబెర్రీ మొక్క ఆరోగ్యంగా ఉంది.",
+      "prevention": "సరైన నీటిపారుదల ఉండాలి.",
+      "treatment": "చికిత్స అవసరం లేదు.",
+      "organic": "సేంద్రియ ఎరువులు వాడాలి."
+    }
+  },
+
+  "Tomato___Bacterial_spot": {
+    "en": {
+      "description": "Bacterial spot causes dark lesions on tomato leaves and fruits.",
+      "prevention": "Use certified disease-free seeds.",
+      "treatment": "Apply copper-based bactericides.",
+      "organic": "Neem oil spray."
+    },
+    "te": {
+      "description": "టమాటా ఆకులపై నలుపు మచ్చలు కనిపిస్తాయి.",
+      "prevention": "రోగరహిత విత్తనాలు వాడాలి.",
+      "treatment": "కాపర్ మందులు వాడాలి.",
+      "organic": "నీమ ఆయిల్ వాడాలి."
+    }
+  },
+
+  "Tomato___Leaf_Mold": {
+    "en": {
+      "description": "Leaf mold causes yellow spots on upper leaf surfaces.",
+      "prevention": "Improve greenhouse ventilation.",
+      "treatment": "Apply fungicides.",
+      "organic": "Remove infected leaves."
+    },
+    "te": {
+      "description": "ఆకులపై పసుపు మచ్చలు కనిపిస్తాయి.",
+      "prevention": "గాలి ప్రసరణ ఉండాలి.",
+      "treatment": "శిలీంద్రనాశకాలు వాడాలి.",
+      "organic": "సోకిన ఆకులు తొలగించాలి."
+    }
+  },
+
+  "Tomato___Septoria_leaf_spot": {
+    "en": {
+      "description": "Septoria causes small circular spots on tomato leaves.",
+      "prevention": "Avoid overhead irrigation.",
+      "treatment": "Apply fungicides.",
+      "organic": "Crop rotation recommended."
+    },
+    "te": {
+      "description": "టమాటా ఆకులపై చిన్న వలయాలు కనిపిస్తాయి.",
+      "prevention": "పైనుంచి నీరు పోయకూడదు.",
+      "treatment": "శిలీంద్రనాశకాలు వాడాలి.",
+      "organic": "పంట మార్పిడి చేయాలి."
+    }
+  },
+
+  "Tomato___Spider_mites Two-spotted_spider_mite": {
+    "en": {
+      "description": "Spider mites cause yellow speckling and webbing on leaves.",
+      "prevention": "Maintain humidity and monitor regularly.",
+      "treatment": "Use miticides.",
+      "organic": "Neem oil spray."
+    },
+    "te": {
+      "description": "స్పైడర్ మైట్స్ ఆకులపై పసుపు మచ్చలు కలిగిస్తాయి.",
+      "prevention": "తేమ స్థాయి ఉంచాలి.",
+      "treatment": "మైటిసైడ్ వాడాలి.",
+      "organic": "నీమ ఆయిల్ వాడాలి."
+    }
+  },
+
+  "Tomato___Target_Spot": {
+    "en": {
+      "description": "Target spot causes brown concentric lesions.",
+      "prevention": "Ensure field sanitation.",
+      "treatment": "Apply fungicides.",
+      "organic": "Remove infected debris."
+    },
+    "te": {
+      "description": "టార్గెట్ స్పాట్ వలయాకార మచ్చలు కలిగిస్తుంది.",
+      "prevention": "పరిశుభ్రత పాటించాలి.",
+      "treatment": "శిలీంద్రనాశకాలు వాడాలి.",
+      "organic": "సోకిన భాగాలు తొలగించాలి."
+    }
+  },
+
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+    "en": {
+      "description": "Viral disease causing yellow curled leaves and stunted growth.",
+      "prevention": "Control whiteflies.",
+      "treatment": "Remove infected plants.",
+      "organic": "Neem oil for vector control."
+    },
+    "te": {
+      "description": "ఆకులు పసుపు రంగులో వంగిపోతాయి.",
+      "prevention": "వైట్ ఫ్లై నియంత్రణ చేయాలి.",
+      "treatment": "సోకిన మొక్కలు తొలగించాలి.",
+      "organic": "నీమ ఆయిల్ వాడాలి."
+    }
+  },
+
+  "Tomato___Tomato_mosaic_virus": {
+    "en": {
+      "description": "Virus causing mosaic pattern and leaf distortion.",
+      "prevention": "Use resistant varieties.",
+      "treatment": "Remove infected plants.",
+      "organic": "Disinfect tools regularly."
+    },
+    "te": {
+      "description": "మొసాయిక్ నమూనా ఆకులపై కనిపిస్తుంది.",
+      "prevention": "రోగనిరోధక రకాలు వాడాలి.",
+      "treatment": "సోకిన మొక్కలు తొలగించాలి.",
+      "organic": "పరికరాలు శుభ్రపరచాలి."
+    }
+  }
+
+
+  
+}
