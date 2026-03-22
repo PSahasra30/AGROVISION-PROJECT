@@ -1,11 +1,3 @@
-// const About = () => {
-//   return <h1>About Model</h1>;
-// };
-
-// export default About;
-
-
-
 import { useContext } from "react";
 import { LanguageContext } from "../context/LanguageContext";
 import { translations } from "../translations";

@@ -46,6 +46,7 @@ env/
 datasets/
 data/
 *.zip
+*.mp4
 
 # -------------------------
 # OS files
