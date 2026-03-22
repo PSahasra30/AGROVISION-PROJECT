@@ -1,4 +1,9 @@
+# -------------------------
+
 # Logs
+
+# -------------------------
+
 logs
 *.log
 npm-debug.log*
@@ -7,18 +12,106 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# -------------------------
+
+# Node / React
+
+# -------------------------
+
+node_modules/
+dist/
+dist-ssr/
+build/
 *.local
 
-# Editor directories and files
+# -------------------------
+
+# Environment variables
+
+# -------------------------
+
+.env
+.env.local
+.env.development
+.env.production
+
+# -------------------------
+
+# Python
+
+# -------------------------
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+
+venv/
+env/
+.venv/
+
+# -------------------------
+
+# ML Model Files
+
+# -------------------------
+
+*.h5
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.weights
+
+# -------------------------
+
+# Dataset / Large Files
+
+# -------------------------
+
+datasets/
+data/
+*.zip
+*.mp4
+
+# -------------------------
+
+# OS files
+
+# -------------------------
+
+.DS_Store
+Thumbs.db
+
+# -------------------------
+
+# IDE / Editor files
+
+# -------------------------
+
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# -------------------------
+
+# Jupyter / Colab
+
+# -------------------------
+
+.ipynb_checkpoints/
+
+# -------------------------
+
+# Temporary files
+
+# -------------------------
+
+*.tmp
