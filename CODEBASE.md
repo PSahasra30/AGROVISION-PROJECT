@@ -1,54 +1,6 @@
 # AgroVision Codebase Guide
 
 This guide documents the checked-out AgroVision implementation: its main files, runtime flow, configuration, model contract, data handling, and known gaps. It reflects the repository reviewed on 2026-09-24.
-
-## Repository map
-
-~~~text
-AgroVision_AI/
-â”œâ”€â”€ .env.example
-â”œâ”€â”€ .gitignore
-â”œâ”€â”€ README.md
-â”œâ”€â”€ CODEBASE.md
-â”œâ”€â”€ backend/
-â”‚   â”œâ”€â”€ main.py
-â”‚   â”œâ”€â”€ requirements.txt
-â”‚   â”œâ”€â”€ class_labels.json
-â”‚   â”œâ”€â”€ disease_database.json
-â”‚   â”œâ”€â”€ app/
-â”‚   â”‚   â”œâ”€â”€ config.py
-â”‚   â”‚   â”œâ”€â”€ main.py
-â”‚   â”‚   â”œâ”€â”€ database.py
-â”‚   â”‚   â”œâ”€â”€ dependencies.py
-â”‚   â”‚   â”œâ”€â”€ schemas.py
-â”‚   â”‚   â”œâ”€â”€ security.py
-â”‚   â”‚   â”œâ”€â”€ routers/{auth,health,predictions}.py
-â”‚   â”‚   â””â”€â”€ services/{image_processing,model_runtime,recommendations}.py
-â”‚   â””â”€â”€ tests/test_api.py
-â”œâ”€â”€ frontend/
-â”‚   â”œâ”€â”€ .env.example
-â”‚   â”œâ”€â”€ package.json
-â”‚   â”œâ”€â”€ package-lock.json
-â”‚   â”œâ”€â”€ vite.config.js
-â”‚   â”œâ”€â”€ eslint.config.js
-â”‚   â”œâ”€â”€ index.html
-â”‚   â”œâ”€â”€ public/{agrovision-mark.svg,images/bg.jpg}
-â”‚   â””â”€â”€ src/
-â”‚       â”œâ”€â”€ App.jsx
-â”‚       â”œâ”€â”€ main.jsx
-â”‚       â”œâ”€â”€ api.js
-â”‚       â”œâ”€â”€ translations.js
-â”‚       â”œâ”€â”€ index.css
-â”‚       â”œâ”€â”€ components/{AppShell,Icon,LanguageSwitch,PredictionCard,ProtectedImage}.jsx
-â”‚       â”œâ”€â”€ contexts/{AuthContext,AuthProvider,LanguageContext,LanguageProvider,useAuth,useLanguage}.jsx
-â”‚       â””â”€â”€ pages/{About,AuthPage,Dashboard,Detect,History,Result}.jsx
-â””â”€â”€ ml/
-    â”œâ”€â”€ configs/{experiments,plantvillage}.json
-    â”œâ”€â”€ notebooks/
-    â”‚   â”œâ”€â”€ train_baseline_mobilenetv2_colab.ipynb
-    â”‚   â””â”€â”€ train_enhanced_efficientnetv2b0_colab.ipynb
-    â”œâ”€â”€ reports/plantvillage_audit.json
-    â””â”€â”€ splits/plantvillage_seed42.csv
 ~~~
 
 The tree omits ignored or generated content. The local final model and sidecars are in **backend/models/** but ignored by Git. Other local-only paths include environment files and **backend/storage/images/**.
