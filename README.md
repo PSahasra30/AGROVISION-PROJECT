@@ -1,4 +1,4 @@
-# AgroVision â€” AI Crop Disease Detection & Recommendation Platform
+# AgroVision - AI Crop Disease Detection & Recommendation Platform
 
 AgroVision is a bilingual web application for reviewing crop-leaf images with a 38-class classifier and a controlled disease-information guide. A React interface sends an uploaded or camera-captured image to a FastAPI service. The service validates and resizes the image, runs the final EfficientNetV2B0 + ECA model, returns ranked classes and confidence, and stores authenticated results in MongoDB.
 
@@ -92,43 +92,6 @@ The frontend keeps interface translations in `frontend/src/translations.js`. `La
 | Development and checks | ESLint, Python `unittest`, FastAPI TestClient / HTTPX, Google Colab notebooks |
 
 The lockfile requires Node.js `^20.19.0` or `>=22.12.0` for its Vite version. Backend dependencies are declared in `backend/requirements.txt`.
-
-## Project structure
-
-~~~text
-AgroVision_AI/
-â”œâ”€â”€ README.md
-â”œâ”€â”€ CODEBASE.md
-â”œâ”€â”€ .env.example
-â”œâ”€â”€ .gitignore
-â”œâ”€â”€ backend/
-â”‚   â”œâ”€â”€ main.py
-â”‚   â”œâ”€â”€ requirements.txt
-â”‚   â”œâ”€â”€ class_labels.json
-â”‚   â”œâ”€â”€ disease_database.json
-â”‚   â”œâ”€â”€ app/
-â”‚   â”‚   â”œâ”€â”€ config.py, main.py, database.py, dependencies.py
-â”‚   â”‚   â”œâ”€â”€ schemas.py, security.py
-â”‚   â”‚   â”œâ”€â”€ routers/ (auth, health, predictions)
-â”‚   â”‚   â””â”€â”€ services/ (image_processing, model_runtime, recommendations)
-â”‚   â”œâ”€â”€ tests/test_api.py
-â”‚   â”œâ”€â”€ models/ (local, Git-ignored model and sidecars)
-â”‚   â””â”€â”€ storage/images/ (runtime, Git-ignored uploads)
-â”œâ”€â”€ frontend/
-â”‚   â”œâ”€â”€ .env.example
-â”‚   â”œâ”€â”€ package.json, package-lock.json, vite.config.js, eslint.config.js
-â”‚   â”œâ”€â”€ public/ (brand SVG and background image)
-â”‚   â””â”€â”€ src/
-â”‚       â”œâ”€â”€ App.jsx, main.jsx, api.js, translations.js, index.css
-â”‚       â”œâ”€â”€ components/
-â”‚       â”œâ”€â”€ context/
-â”‚       â””â”€â”€ pages/
-â””â”€â”€ ml/
-    â”œâ”€â”€ configs/ (PlantVillage and experiment protocol)
-    â”œâ”€â”€ notebooks/ (MobileNetV2 baseline and EfficientNetV2B0 + ECA)
-    â”œâ”€â”€ reports/plantvillage_audit.json
-    â””â”€â”€ splits/plantvillage_seed42.csv
-~~~
 
 `CODEBASE.md` describes the implementation and data flows in more detail. The tree omits `.env`, `.git`, dependencies, caches, and generated build output. Model files, local image storage, and the dataset archive are not committed.
 
