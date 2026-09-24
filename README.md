@@ -206,24 +206,6 @@ Implemented protections include scrypt password hashing, HS256 JWTs, token-prote
 PlantVillage is controlled laboratory-style imagery; field accuracy is unknown. Recommendations are informational, and some guide fields are intentionally absent. Camera use depends on browser support, device availability, permissions, and a secure browser context such as localhost or HTTPS. Local development requires MongoDB, and model/data assets are separate from source control. The repository does not contain a deployment configuration or a `LICENSE` file.
 
 Future work could add a separately evaluated field-image test set, calibrated uncertainty thresholds, broader agronomic review of guide content, model/data provenance records, deployment automation, rate limiting, observability, and account recovery. These are proposals, not current features.
-
-## Screenshots
-
-No application screenshots are included yet. Add captured images to this section when available.
-
-| Screen | Screenshot |
-| --- | --- |
-| Landing / dashboard | Placeholder â€” add a captured screenshot |
-| Upload / camera | Placeholder â€” add a captured screenshot |
-| Analysis state | Placeholder â€” add a captured screenshot |
-| Results | Placeholder â€” add a captured screenshot |
-| History | Placeholder â€” add a captured screenshot |
-| Telugu interface | Placeholder â€” add a captured screenshot |
-
-## License
-
-No license file is present in the repository. Add a license separately before distributing or reusing the project.
-
 ---
 
 For module responsibilities, data contracts, exact model and preprocessing behavior, and design limitations, see [CODEBASE.md](CODEBASE.md).
