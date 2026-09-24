@@ -1,38 +1,67 @@
 # -------------------------
+# Logs
+# -------------------------
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# -------------------------
 # Node / React
 # -------------------------
+
 node_modules/
 dist/
+dist-ssr/
 build/
+*.local
+
+# -------------------------
+# Environment variables
+# -------------------------
+
 .env
 .env.local
 .env.development
 .env.production
+.env.test
+.env.staging
 
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# -------------------------
+# Secrets / Credentials
+# -------------------------
+
+secrets.env
+credentials.json
+*.pem
+*.key
 
 # -------------------------
 # Python
 # -------------------------
+
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# Pytest
+.pytest_cache/
 
 # Virtual environments
 venv/
 env/
 .venv/
 
-# Python environment variables
-.env
-
 # -------------------------
 # ML Model Files
 # -------------------------
+
+# Historical / unused model formats
 *.h5
 *.pt
 *.pth
@@ -43,30 +72,47 @@ env/
 # -------------------------
 # Dataset / Large Files
 # -------------------------
+
 datasets/
 data/
+dataset/
 *.zip
 *.mp4
 
 # -------------------------
+# Local application storage
+# -------------------------
+
+backend/storage/
+
+# -------------------------
 # OS files
 # -------------------------
+
 .DS_Store
 Thumbs.db
 
 # -------------------------
-# IDE files
+# IDE / Editor files
 # -------------------------
-.vscode/
+
+.vscode/*
+!.vscode/extensions.json
 .idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # -------------------------
 # Jupyter / Colab
 # -------------------------
+
 .ipynb_checkpoints/
 
 # -------------------------
 # Temporary files
 # -------------------------
-*.log
+
 *.tmp

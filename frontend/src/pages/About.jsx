@@ -1,71 +1,23 @@
-import { useContext } from "react";
-import { LanguageContext } from "../context/LanguageContext";
-import { translations } from "../translations";
+import Icon from "../components/Icon";
+import { useT } from "../context/useLanguage";
 
-const About = () => {
-
-  const { language } = useContext(LanguageContext);
-  const t = translations[language];
-
+export default function About() {
+  const t = useT();
+  const stats = [["97.82%", "home.accuracy"], ["99.85%", "home.top3"], ["8,154", "home.testSamples"]];
   return (
-
-    <div style={styles.wrapper}>
-
-      <h1 style={styles.title}>{t.about.title}</h1>
-
-      <p style={styles.text}>{t.about.intro}</p>
-
-      <h2 style={styles.section}>{t.about.howTitle}</h2>
-      <p style={styles.text}>{t.about.how}</p>
-
-      <h2 style={styles.section}>{t.about.featuresTitle}</h2>
-
-      <ul style={styles.list}>
-        <li>{t.about.f1}</li>
-        <li>{t.about.f2}</li>
-        <li>{t.about.f3}</li>
-        <li>{t.about.f4}</li>
-        <li>{t.about.f5}</li>
-      </ul>
-
-      <h2 style={styles.section}>{t.about.techTitle}</h2>
-      <p style={styles.text}>{t.about.tech}</p>
-
-      <h2 style={styles.section}>{t.about.goalTitle}</h2>
-      <p style={styles.text}>{t.about.goal}</p>
-
+    <div className="page-stack narrow-page">
+      <header className="page-heading"><div className="eyebrow"><span className="eyebrow-dot" />{t("about.eyebrow")}</div><h1>{t("about.title")}</h1><p>{t("about.intro")}</p></header>
+      <section className="about-metrics panel">
+        <div className="section-kicker">{t("about.evaluationTitle")}</div>
+        <div className="about-stat-grid">{stats.map(([number, label]) => <div key={label}><strong>{number}</strong><span>{t(label)}</span></div>)}</div>
+        <p className="muted">{t("about.dataset")}</p>
+      </section>
+      <div className="about-grid">
+        {[["leaf", "about.modelTitle", "about.modelCopy"], ["scan", "about.baselineTitle", "about.baselineCopy"], ["sprout", "about.guideTitle", "about.guideCopy"], ["shield", "about.privacyTitle", "about.privacyCopy"], ["info", "about.limitationsTitle", "about.limitationsCopy"]].map(([icon, title, body]) => <article className="about-card" key={title}>
+          <span className="about-icon"><Icon name={icon} size={19} /></span><h2>{t(title)}</h2><p>{t(body)}</p>
+        </article>)}
+      </div>
+      <div className="disclaimer-card"><Icon name="info" size={19} /><span>{t("about.support")}</span></div>
     </div>
   );
-};
-
-const styles = {
-
-wrapper:{
-padding:"40px",
-color:"white",
-maxWidth:"900px"
-},
-
-title:{
-fontSize:"32px",
-marginBottom:"20px"
-},
-
-section:{
-marginTop:"25px",
-marginBottom:"10px"
-},
-
-text:{
-lineHeight:"1.7",
-fontSize:"16px"
-},
-
-list:{
-lineHeight:"1.8",
-paddingLeft:"20px"
 }
-
-};
-
-export default About;

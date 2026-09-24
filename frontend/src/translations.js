@@ -1,129 +1,166 @@
 export const translations = {
   en: {
-    sidebar: {
-      dashboard: "Dashboard",
-      detection: "Detection",
-      history: "History",
-      about: "About"
+    brand: "AgroVision",
+    tagline: "Plant health, made clearer",
+    metaTitle: "AgroVision · Plant health insights",
+    language: "Language",
+    english: "English",
+    telugu: "తెలుగు",
+    nav: { overview: "Overview", detect: "New analysis", history: "My history", about: "About" },
+    common: {
+      signIn: "Sign in", signOut: "Sign out", createAccount: "Create account", email: "Email address",
+      password: "Password", loading: "Loading…", retry: "Try again", cancel: "Cancel", delete: "Delete",
+      save: "Save", back: "Back", next: "Next", page: "Page", of: "of", close: "Close",
+      errorTitle: "Something went wrong", backendUnavailable: "The service is temporarily unavailable. Please try again shortly.",
+      sessionExpired: "Your session expired. Please sign in again.", networkError: "Could not reach AgroVision. Check that the API is running and try again.",
+      notDocumented: "No separate details are listed in the guide.",
     },
-
-    hero: {
-      title: "Smart Agriculture Intelligence",
-      subtitle: "AI Powered Crop Disease Detection",
-      start: "Start Detection"
+    auth: {
+      eyebrow: "Your crop health workspace", welcome: "Welcome back", join: "Create your account",
+      signInHint: "Sign in to analyze leaves and view your saved results.", createHint: "Create an account to keep your analyses private and available across sessions.",
+      emailPlaceholder: "you@example.com", passwordPlaceholder: "At least 12 characters", submitLogin: "Sign in securely",
+      submitRegister: "Create account", switchRegister: "New to AgroVision? Create an account", switchLogin: "Already have an account? Sign in",
+      passwordRule: "Use at least 12 characters.", privacy: "Your prediction history is visible only to your account.",
+      invalidCredentials: "Email or password is incorrect.", accountExists: "An account with this email already exists.",
+      invalidEmail: "Enter a valid email address.", passwordRequired: "Enter your password.", passwordTooShort: "Password must be at least 12 characters.",
     },
-
-     badges: {
-      ai: "AI Powered",
-      crops: "38 Categories",
-      multi: "Multilingual",
-      realtime: "Real-Time"
+    home: {
+      eyebrow: "Field-ready crop insights", title: "A clearer first look at leaf health.",
+      subtitle: "Upload a leaf image, review a model prediction, and explore the available disease guidance in one place.",
+      start: "Analyze a leaf", history: "View my history", coverage: "38 PlantVillage classes",
+      step1Title: "Add a leaf photo", step1: "Choose an image or capture one with your device camera.",
+      step2Title: "Review the prediction", step2: "See the model’s leading class, confidence, and top three results.",
+      step3Title: "Explore the guide", step3: "Read the existing bilingual disease notes and their limits.",
+      modelLabel: "Final model", modelName: "EfficientNetV2B0 + ECA", modelCopy: "ImageNet-pretrained, 38-class PlantVillage classifier.",
+      accuracy: "Test accuracy", top3: "Top-3 accuracy", testSamples: "Held-out test images", baseline: "MobileNetV2 baseline",
+      metricNote: "Reported from the final Colab evaluation. Model files are supplied separately.",
+      recent: "Recent analyses", noRecent: "Your saved analyses will appear here.",
     },
-
-    buttons: {
-      camera: "Take Photo",
-      upload: "Upload Image",
-      analyze: "Analyze with AI",
-      back: "Back",
-      next: "Next"
+    detect: {
+      eyebrow: "New analysis", title: "Add a clear leaf image", subtitle: "Use a close, well-lit image with one leaf in focus for the most useful result.",
+      dropTitle: "Choose a photo to get started", dropHint: "JPEG, PNG, or WebP · up to 8 MB", browse: "Choose image", useCamera: "Use camera",
+      cameraTitle: "Camera capture", cameraHint: "Allow camera access, then frame one leaf in good light.", capture: "Capture photo", stopCamera: "Close camera",
+      cameraDenied: "Camera access is unavailable. You can still choose a photo from your device.", cameraUnsupported: "This browser does not support camera capture. Choose a photo instead.",
+      preview: "Image preview", replace: "Replace image", remove: "Remove", analyze: "Analyze leaf", analyzing: "Analyzing leaf…",
+      checking: "Checking image", sending: "Sending image for analysis", saving: "Saving your result", scanTitle: "Reading leaf patterns",
+      scanCopy: "The model is comparing this image with its 38 trained categories. This can take a few seconds.",
+      unsupported: "Choose a JPEG, PNG, or WebP image.", tooLarge: "Image must be 8 MB or smaller.", tooSmall: "Choose an image at least 32 × 32 pixels.",
+      tooManyPixels: "This image is too large to process. Choose a smaller image.", corrupt: "This image could not be opened. Try another photo.",
+      needImage: "Choose or capture a leaf image first.",
     },
-
     result: {
-      confidence: "Confidence",
-      description: "Description",
-      prevention: "Prevention",
-      treatment: "Treatment",
-      organic: "Organic Solution"
+      eyebrow: "Analysis result", title: "Leaf analysis", crop: "Crop", disease: "Detected class", confidence: "Model confidence",
+      status: "Assessment", healthy: "Healthy class", diseased: "Disease class", uncertain: "Uncertain result",
+      uncertainNote: "The model result is uncertain. Try a clearer photo and consider asking a local agricultural expert.",
+      topThree: "Top 3 predictions", overview: "Disease overview", symptoms: "Symptoms", treatment: "Recommended treatment",
+      prevention: "Prevention", practices: "Recommended practices", organic: "Organic options", severity: "Potential impact",
+      disclaimer: "This information is educational. For serious crop concerns or treatment decisions, consult a local agricultural expert or authority.",
+      healthyOverview: "No disease detected.",
+      healthySymptoms: "No disease symptoms detected.",
+      healthyTreatment: "No disease treatment is required.",
+      symptomsUnavailable: "No symptom details are listed in the guide.",
+      practicesUnavailable: "No additional practices are listed in the guide.",
+      newAnalysis: "Analyze another leaf", saved: "Saved to your history", notFound: "This result could not be found.",
     },
-
     history: {
-      title: "Detection History",
-      empty: "No scans yet"
+      eyebrow: "Your saved work", title: "Analysis history", subtitle: "Your results are private to your account.",
+      emptyTitle: "No analyses yet", emptyCopy: "Your saved leaf analyses will appear here.", start: "Analyze your first leaf",
+      open: "Open result", remove: "Delete result", deleteConfirm: "Delete this analysis and its saved image?",
+      deleted: "Analysis deleted.", loadError: "History could not be loaded.",
     },
-
     about: {
-      title: "About AgroVision AI",
-      intro:
-        "AgroVision AI is an intelligent crop disease detection system that helps farmers identify plant diseases quickly using Artificial Intelligence.",
-      howTitle: "How it Works",
-      how:
-        "The farmer uploads a photo of a crop leaf. The AI model analyzes the image and predicts the disease category along with confidence score and treatment recommendations.",
-      featuresTitle: "Key Features",
-      f1: "AI-powered disease detection",
-      f2: "Supports multiple crop disease categories",
-      f3: "Multilingual support (English & Telugu)",
-      f4: "Provides prevention and treatment advice",
-      f5: "Local scan history storage",
-      techTitle: "Technology Used",
-      tech:
-        "Frontend: React.js | Backend: Python FastAPI | AI Model: YOLO-based plant disease detection",
-      goalTitle: "Our Goal",
-      goal:
-        "Our goal is to help farmers detect crop diseases early and take the right preventive actions to improve crop health and yield."
-    }
+      eyebrow: "How AgroVision works", title: "A practical model, with clear limits.",
+      intro: "AgroVision combines an image classifier with a controlled bilingual disease guide. A model result is a starting point for review, not a field diagnosis.",
+      modelTitle: "The final model", modelCopy: "EfficientNetV2B0 with lightweight ECA channel attention, trained for 38 PlantVillage categories.",
+      evaluationTitle: "Reported test evaluation", dataset: "PlantVillage held-out test set", baselineTitle: "Baseline comparison",
+      baselineCopy: "The earlier MobileNetV2 baseline reported 97.15% test accuracy. These figures are reported values from separate Colab runs.",
+      guideTitle: "Controlled disease guide", guideCopy: "English and Telugu notes come from the project’s existing disease database. Missing fields remain marked as not documented; the app does not generate treatments.",
+      privacyTitle: "Private history", privacyCopy: "Accounts use password hashes and signed access tokens. Prediction records and image access are scoped to the signed-in user.",
+      limitationsTitle: "Known limitations", limitationsCopy: "PlantVillage images are controlled and may not represent field lighting, backgrounds, cameras, or disease severity. A high score does not confirm a field diagnosis.",
+      version: "Model version", support: "For serious crop concerns, contact a local agricultural expert or authority.",
+    },
+    errors: { unauthorized: "Please sign in to continue.", forbidden: "You do not have access to this result.", notFound: "The requested item could not be found.", invalidImage: "The image could not be processed. Check the file and try again.", tooLarge: "The image exceeds the 8 MB upload limit.", modelUnavailable: "The final model is not available on this server yet.", databaseUnavailable: "History service is not available right now.", generic: "The request could not be completed. Please try again." },
   },
-
   te: {
-    sidebar: {
-      dashboard: "డాష్‌బోర్డ్",
-      detection: "రోగ గుర్తింపు",
-      history: "చరిత్ర",
-      about: "మోడల్ వివరాలు"
+    brand: "ఆగ్రోవిజన్",
+    tagline: "పంట ఆరోగ్యాన్ని స్పష్టంగా తెలుసుకోండి",
+    metaTitle: "ఆగ్రోవిజన్ · పంట ఆరోగ్య సమాచారం",
+    language: "భాష",
+    english: "English",
+    telugu: "తెలుగు",
+    nav: { overview: "సారాంశం", detect: "కొత్త విశ్లేషణ", history: "నా చరిత్ర", about: "వివరాలు" },
+    common: {
+      signIn: "ప్రవేశించండి", signOut: "నిష్క్రమించండి", createAccount: "ఖాతా సృష్టించండి", email: "ఇమెయిల్ చిరునామా",
+      password: "పాస్‌వర్డ్", loading: "లోడ్ అవుతోంది…", retry: "మళ్లీ ప్రయత్నించండి", cancel: "రద్దు", delete: "తొలగించు",
+      save: "సేవ్ చేయండి", back: "వెనుకకు", next: "తర్వాతి", page: "పేజీ", of: "/", close: "మూసివేయి",
+      errorTitle: "ఏదో సమస్య ఏర్పడింది", backendUnavailable: "సేవ తాత్కాలికంగా అందుబాటులో లేదు. కొద్దిసేపటి తర్వాత మళ్లీ ప్రయత్నించండి.",
+      sessionExpired: "మీ సెషన్ గడువు ముగిసింది. మళ్లీ ప్రవేశించండి.", networkError: "ఆగ్రోవిజన్‌ను చేరుకోలేకపోయాం. API నడుస్తుందో చూసి మళ్లీ ప్రయత్నించండి.",
+      notDocumented: "ఈ విభాగానికి గైడ్‌లో ప్రత్యేక వివరాలు లేవు.",
     },
-
-    hero: {
-      title: "స్మార్ట్ వ్యవసాయ ఇంటెలిజెన్స్",
-      subtitle: "AI ఆధారిత పంట రోగ గుర్తింపు",
-      start: "గుర్తింపును ప్రారంభించండి"
+    auth: {
+      eyebrow: "మీ పంట ఆరోగ్య వేదిక", welcome: "మళ్లీ స్వాగతం", join: "మీ ఖాతాను సృష్టించండి",
+      signInHint: "ఆకులను విశ్లేషించడానికి, మీ ఫలితాలను చూడడానికి ప్రవేశించండి.", createHint: "మీ విశ్లేషణలు మీ ఖాతాలో భద్రంగా ఉండేందుకు ఖాతా సృష్టించండి.",
+      emailPlaceholder: "you@example.com", passwordPlaceholder: "కనీసం 12 అక్షరాలు", submitLogin: "సురక్షితంగా ప్రవేశించండి",
+      submitRegister: "ఖాతా సృష్టించండి", switchRegister: "ఆగ్రోవిజన్‌లో కొత్తవారా? ఖాతా సృష్టించండి", switchLogin: "ఇప్పటికే ఖాతా ఉందా? ప్రవేశించండి",
+      passwordRule: "కనీసం 12 అక్షరాలు ఉపయోగించండి.", privacy: "మీ విశ్లేషణ చరిత్ర మీ ఖాతాకు మాత్రమే కనిపిస్తుంది.",
+      invalidCredentials: "ఇమెయిల్ లేదా పాస్‌వర్డ్ సరైంది కాదు.", accountExists: "ఈ ఇమెయిల్‌తో ఖాతా ఇప్పటికే ఉంది.",
+      invalidEmail: "సరైన ఇమెయిల్ చిరునామాను నమోదు చేయండి.", passwordRequired: "మీ పాస్‌వర్డ్ నమోదు చేయండి.", passwordTooShort: "పాస్‌వర్డ్‌లో కనీసం 12 అక్షరాలు ఉండాలి.",
     },
-
-    badges: {
-      ai: "AI ఆధారితం",
-      crops: "38 వర్గాలు",
-      multi: "బహుభాషా",
-      realtime: "తక్షణ గుర్తింపు"
+    home: {
+      eyebrow: "పంటలపై స్పష్టమైన సమాచారం", title: "ఆకు ఆరోగ్యాన్ని మొదటిసారి స్పష్టంగా చూడండి.",
+      subtitle: "ఆకు చిత్రాన్ని అప్‌లోడ్ చేసి, మోడల్ అంచనాను సమీక్షించి, అందుబాటులో ఉన్న వ్యాధి మార్గదర్శకాన్ని చూడండి.",
+      start: "ఆకును విశ్లేషించండి", history: "నా చరిత్ర చూడండి", coverage: "ప్లాంట్‌విలేజ్‌లోని 38 తరగతులు",
+      step1Title: "ఆకు ఫోటో జోడించండి", step1: "చిత్రాన్ని ఎంచుకోండి లేదా పరికర కెమెరాతో తీయండి.",
+      step2Title: "అంచనాను సమీక్షించండి", step2: "మోడల్ ప్రధాన తరగతి, విశ్వాసం, మొదటి మూడు ఫలితాలను చూడండి.",
+      step3Title: "మార్గదర్శకాన్ని చదవండి", step3: "ద్విభాషా వ్యాధి సమాచారాన్ని, దాని పరిమితులను పరిశీలించండి.",
+      modelLabel: "తుది మోడల్", modelName: "EfficientNetV2B0 + ECA", modelCopy: "ImageNet ముందస్తు శిక్షణతో రూపొందిన 38-తరగతుల ప్లాంట్‌విలేజ్ వర్గీకరణ మోడల్.",
+      accuracy: "పరీక్ష ఖచ్చితత్వం", top3: "మొదటి 3 ఖచ్చితత్వం", testSamples: "పరీక్ష చిత్రాలు", baseline: "MobileNetV2 ప్రాథమిక మోడల్",
+      metricNote: "తుది Colab మూల్యాంకనంలో నివేదించిన ఫలితాలు. మోడల్ ఫైళ్లు విడిగా అందించాలి.",
+      recent: "ఇటీవలి విశ్లేషణలు", noRecent: "మీ సేవ్ చేసిన విశ్లేషణలు ఇక్కడ కనిపిస్తాయి.",
     },
-
-    buttons: {
-      camera: "ఫోటో తీసుకోండి",
-      upload: "చిత్రం అప్లోడ్ చేయండి",
-      analyze: "AI తో విశ్లేషించండి",
-      back: "వెనక్కి",
-      next: "తర్వాత"
+    detect: {
+      eyebrow: "కొత్త విశ్లేషణ", title: "స్పష్టమైన ఆకు చిత్రాన్ని జోడించండి", subtitle: "ఉపయోగకరమైన ఫలితం కోసం మంచి వెలుతురులో ఒక ఆకును దగ్గరగా ఫోకస్ చేయండి.",
+      dropTitle: "ప్రారంభించడానికి ఫోటో ఎంచుకోండి", dropHint: "JPEG, PNG లేదా WebP · గరిష్ఠం 8 MB", browse: "చిత్రాన్ని ఎంచుకోండి", useCamera: "కెమెరా ఉపయోగించండి",
+      cameraTitle: "కెమెరా చిత్రీకరణ", cameraHint: "కెమెరా అనుమతి ఇవ్వండి. మంచి వెలుతురులో ఒక ఆకును ఫ్రేమ్‌లో ఉంచండి.", capture: "ఫోటో తీయండి", stopCamera: "కెమెరా మూసివేయి",
+      cameraDenied: "కెమెరా అందుబాటులో లేదు. పరికరం నుంచి ఫోటోను ఎంచుకోవచ్చు.", cameraUnsupported: "ఈ బ్రౌజర్‌లో కెమెరా చిత్రీకరణ లేదు. బదులుగా ఫోటోను ఎంచుకోండి.",
+      preview: "చిత్రం ప్రివ్యూ", replace: "చిత్రాన్ని మార్చండి", remove: "తొలగించు", analyze: "ఆకును విశ్లేషించండి", analyzing: "ఆకును విశ్లేషిస్తోంది…",
+      checking: "చిత్రాన్ని తనిఖీ చేస్తోంది", sending: "విశ్లేషణకు చిత్రాన్ని పంపుతోంది", saving: "ఫలితాన్ని సేవ్ చేస్తోంది", scanTitle: "ఆకు నమూనాలను పరిశీలిస్తోంది",
+      scanCopy: "మోడల్ ఈ చిత్రాన్ని శిక్షణ పొందిన 38 తరగతులతో పోలుస్తోంది. దీనికి కొన్ని సెకన్లు పట్టవచ్చు.",
+      unsupported: "JPEG, PNG లేదా WebP చిత్రాన్ని ఎంచుకోండి.", tooLarge: "చిత్రం పరిమాణం 8 MB లేదా అంతకంటే తక్కువగా ఉండాలి.", tooSmall: "కనీసం 32 × 32 పిక్సెల్‌ల చిత్రం ఎంచుకోండి.",
+      tooManyPixels: "ఈ చిత్రం ప్రాసెస్ చేయడానికి చాలా పెద్దది. చిన్న చిత్రాన్ని ఎంచుకోండి.", corrupt: "ఈ చిత్రాన్ని తెరవలేకపోయాం. మరో ఫోటో ప్రయత్నించండి.",
+      needImage: "ముందుగా ఆకు చిత్రాన్ని ఎంచుకోండి లేదా తీయండి.",
     },
-
     result: {
-      confidence: "నమ్మక స్థాయి",
-      description: "వివరణ",
-      prevention: "నివారణ",
-      treatment: "చికిత్స",
-      organic: "సేంద్రియ పరిష్కారం"
+      eyebrow: "విశ్లేషణ ఫలితం", title: "ఆకు విశ్లేషణ", crop: "పంట", disease: "గుర్తించిన తరగతి", confidence: "మోడల్ విశ్వాసం",
+      status: "అంచనా", healthy: "ఆరోగ్యకరమైన తరగతి", diseased: "వ్యాధి తరగతి", uncertain: "నిర్ధారణ కాని ఫలితం",
+      uncertainNote: "మోడల్ ఫలితంపై స్పష్టత లేదు. మెరుగైన ఫోటో ప్రయత్నించండి; స్థానిక వ్యవసాయ నిపుణుడిని సంప్రదించండి.",
+      topThree: "మొదటి 3 అంచనాలు", overview: "వ్యాధి వివరణ", symptoms: "లక్షణాలు", treatment: "సూచించిన చికిత్స",
+      prevention: "నివారణ", practices: "సూచించిన పద్ధతులు", organic: "సేంద్రియ మార్గాలు", severity: "సంభవించే ప్రభావం",
+      disclaimer: "ఈ సమాచారం విద్యాపరమైనది. తీవ్రమైన పంట సమస్యలు లేదా చికిత్స నిర్ణయాల కోసం స్థానిక వ్యవసాయ నిపుణుడిని లేదా అధికారిని సంప్రదించండి.",
+      healthyOverview: "వ్యాధి గుర్తించబడలేదు.",
+      healthySymptoms: "వ్యాధి లక్షణాలు కనిపించలేదు.",
+      healthyTreatment: "వ్యాధికి చికిత్స అవసరం లేదు.",
+      symptomsUnavailable: "లక్షణాల వివరాలు గైడ్‌లో లేవు.",
+      practicesUnavailable: "గైడ్‌లో అదనపు పద్ధతులు పేర్కొనలేదు.",
+      newAnalysis: "మరో ఆకును విశ్లేషించండి", saved: "మీ చరిత్రలో సేవ్ అయింది", notFound: "ఈ ఫలితం కనబడలేదు.",
     },
-
     history: {
-      title: "గుర్తింపు చరిత్ర",
-      empty: "గత స్కాన్లు లేవు"
+      eyebrow: "మీ సేవ్ చేసిన విశ్లేషణలు", title: "విశ్లేషణ చరిత్ర", subtitle: "మీ ఫలితాలు మీ ఖాతాకు మాత్రమే కనిపిస్తాయి.",
+      emptyTitle: "ఇంకా విశ్లేషణలు లేవు", emptyCopy: "మీ సేవ్ చేసిన ఆకు విశ్లేషణలు ఇక్కడ కనిపిస్తాయి.", start: "మొదటి ఆకును విశ్లేషించండి",
+      open: "ఫలితాన్ని తెరవండి", remove: "ఫలితాన్ని తొలగించండి", deleteConfirm: "ఈ విశ్లేషణను, సేవ్ చేసిన చిత్రాన్ని తొలగించాలా?",
+      deleted: "విశ్లేషణ తొలగించబడింది.", loadError: "చరిత్రను లోడ్ చేయలేకపోయాం.",
     },
-
     about: {
-      title: "అగ్రోవిజన్ AI గురించి",
-      intro:
-        "అగ్రోవిజన్ AI ఒక స్మార్ట్ పంట రోగ గుర్తింపు వ్యవస్థ. ఇది కృత్రిమ మేధస్సు సహాయంతో రైతులకు పంటలలో వచ్చే రోగాలను త్వరగా గుర్తించడంలో సహాయపడుతుంది.",
-      howTitle: "ఇది ఎలా పనిచేస్తుంది",
-      how:
-        "రైతు పంట ఆకుకు ఫోటో తీసి అప్లోడ్ చేస్తాడు. AI మోడల్ ఆ చిత్రాన్ని విశ్లేషించి రోగాన్ని గుర్తించి నమ్మక స్థాయి మరియు చికిత్స సూచనలు అందిస్తుంది.",
-      featuresTitle: "ప్రధాన లక్షణాలు",
-      f1: "AI ఆధారిత రోగ గుర్తింపు",
-      f2: "అనేక పంట రోగ వర్గాలకు మద్దతు",
-      f3: "బహుభాషా మద్దతు (ఇంగ్లీష్ & తెలుగు)",
-      f4: "నిరోధం మరియు చికిత్స సూచనలు",
-      f5: "లోకల్ స్కాన్ చరిత్ర నిల్వ",
-      techTitle: "ఉపయోగించిన సాంకేతికత",
-      tech:
-        "Frontend: React.js | Backend: Python FastAPI | AI Model: YOLO ఆధారిత పంట రోగ గుర్తింపు",
-      goalTitle: "మా లక్ష్యం",
-      goal:
-        "రైతులు పంట రోగాలను త్వరగా గుర్తించి సరైన చర్యలు తీసుకోవడానికి సహాయపడటం మా లక్ష్యం."
-    }
-   }
+      eyebrow: "ఆగ్రోవిజన్ ఎలా పనిచేస్తుంది", title: "ఆచరణాత్మక మోడల్ — స్పష్టమైన పరిమితులతో.",
+      intro: "ఆగ్రోవిజన్ చిత్ర వర్గీకరణ మోడల్‌ను నియంత్రిత ద్విభాషా వ్యాధి మార్గదర్శకంతో కలుపుతుంది. మోడల్ ఫలితం పరిశీలనకు మొదటి సూచన మాత్రమే; పొలంలో నిర్ధారణ కాదు.",
+      modelTitle: "తుది మోడల్", modelCopy: "తేలికపాటి ECA ఛానల్ అటెన్షన్‌తో EfficientNetV2B0; ప్లాంట్‌విలేజ్‌లోని 38 తరగతుల కోసం శిక్షణ పొందింది.",
+      evaluationTitle: "నివేదించిన పరీక్ష ఫలితాలు", dataset: "ప్లాంట్‌విలేజ్ వేరుగా ఉంచిన పరీక్ష డేటా", baselineTitle: "ప్రాథమిక మోడల్‌తో పోలిక",
+      baselineCopy: "మునుపటి MobileNetV2 ప్రాథమిక మోడల్ పరీక్ష ఖచ్చితత్వం 97.15%గా నివేదించబడింది. ఇవి వేర్వేరు Colab అమలుల ఫలితాలు.",
+      guideTitle: "నియంత్రిత వ్యాధి మార్గదర్శకం", guideCopy: "ఆంగ్ల, తెలుగు సమాచారం ప్రాజెక్ట్‌లోని వ్యాధి డేటాబేస్ నుంచి వస్తుంది. లేని వివరాలు లేవని చూపిస్తాం; యాప్ చికిత్సలను సృష్టించదు.",
+      privacyTitle: "వ్యక్తిగత చరిత్ర", privacyCopy: "ఖాతాలు పాస్‌వర్డ్ హ్యాష్‌లు, సంతకం చేసిన యాక్సెస్ టోకెన్లను ఉపయోగిస్తాయి. అంచనాలు, చిత్రాలు ప్రవేశించిన వినియోగదారుకే పరిమితం.",
+      limitationsTitle: "తెలిసిన పరిమితులు", limitationsCopy: "ప్లాంట్‌విలేజ్ చిత్రాలు నియంత్రిత పరిస్థితుల్లో తీసినవి. అవి పొలంలోని వెలుతురు, నేపథ్యం, కెమెరాలు లేదా వ్యాధి తీవ్రతను ప్రతిబింబించకపోవచ్చు. అధిక స్కోరు పొలంలో నిర్ధారణ కాదు.",
+      version: "మోడల్ సంచిక", support: "తీవ్రమైన పంట సమస్యల కోసం స్థానిక వ్యవసాయ నిపుణుడిని లేదా అధికారిని సంప్రదించండి.",
+    },
+    errors: { unauthorized: "కొనసాగించడానికి ప్రవేశించండి.", forbidden: "ఈ ఫలితాన్ని చూడటానికి మీకు అనుమతి లేదు.", notFound: "అభ్యర్థించిన అంశం కనబడలేదు.", invalidImage: "చిత్రాన్ని ప్రాసెస్ చేయలేకపోయాం. ఫైల్‌ను తనిఖీ చేసి మళ్లీ ప్రయత్నించండి.", tooLarge: "చిత్రం 8 MB పరిమితిని మించిపోయింది.", modelUnavailable: "ఈ సర్వర్‌లో తుది మోడల్ ఇంకా అందుబాటులో లేదు.", databaseUnavailable: "చరిత్ర సేవ ప్రస్తుతం అందుబాటులో లేదు.", generic: "అభ్యర్థనను పూర్తి చేయలేకపోయాం. మళ్లీ ప్రయత్నించండి." },
+  },
 };

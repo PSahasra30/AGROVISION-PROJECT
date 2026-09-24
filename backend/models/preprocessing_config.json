@@ -1,0 +1,25 @@
+{
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "color_order": "RGB",
+  "input_dtype": "float32",
+  "raw_input_range": [
+    0.0,
+    255.0
+  ],
+  "augmentation": {
+    "horizontal_flip": true,
+    "rotation": 0.06,
+    "translation": 0.06,
+    "zoom": 0.08,
+    "contrast": 0.1,
+    "training_only": true
+  },
+  "augmentation_training_only": true,
+  "external_normalization": "(x / 255) * 2 - 1, equivalent to x / 127.5 - 1",
+  "efficientnetv2_include_preprocessing": false,
+  "validation_test_augmentation": false
+}

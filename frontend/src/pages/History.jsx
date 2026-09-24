@@ -1,180 +1,61 @@
-import { useContext, useState, useEffect } from "react";
-import { LanguageContext } from "../context/LanguageContext";
-import { translations } from "../translations";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { api, apiErrorKey } from "../api";
+import Icon from "../components/Icon";
+import PredictionCard from "../components/PredictionCard";
+import { useLanguage, useT } from "../context/useLanguage";
 
-const History = () => {
+export default function History() {
+  const [items, setItems] = useState([]);
+  const [page, setPage] = useState(1);
+  const [total, setTotal] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [deleting, setDeleting] = useState("");
+  const [refreshKey, setRefreshKey] = useState(0);
+  const { language } = useLanguage();
+  const t = useT();
+  const limit = 12;
 
-  const { language } = useContext(LanguageContext);
-  const t = translations[language];
+  useEffect(() => {
+    let active = true;
+    api.get("/api/predictions/history", { params: { page, limit, language } })
+      .then(({ data }) => { if (active) { setItems(data.items); setTotal(data.total); setError(""); } })
+      .catch((requestError) => { if (active) setError(t(apiErrorKey(requestError))); })
+      .finally(() => { if (active) setLoading(false); });
+    return () => { active = false; };
+  }, [page, language, refreshKey, t]);
 
-  const [history,setHistory] = useState([]);
-
-  useEffect(()=>{
-
-    const stored = JSON.parse(localStorage.getItem("history")) || [];
-
-    const now = new Date();
-
-    const filtered = stored.filter(item => {
-
-      const scanDate = new Date(item.date);
-
-      const diffDays =
-        (now - scanDate) / (1000 * 60 * 60 * 24);
-
-      return diffDays <= 14;
-
-    });
-
-    setHistory(filtered);
-
-    localStorage.setItem("history",JSON.stringify(filtered));
-
-  },[]);
-
-
-  const deleteScan = (index) => {
-
-    const confirmDelete = window.confirm(
-      language === "en"
-        ? "Do you really want to delete this scan?"
-        : "ఈ స్కాన్‌ను నిజంగా తొలగించాలనుకుంటున్నారా?"
-    );
-
-    if(!confirmDelete) return;
-
-    const updated = history.filter((_,i)=>i!==index);
-
-    setHistory(updated);
-
-    localStorage.setItem("history",JSON.stringify(updated));
-
-    alert(
-      language === "en"
-        ? "Scan removed successfully"
-        : "స్కాన్ విజయవంతంగా తొలగించబడింది"
-    );
-
+  const remove = async (item) => {
+    if (!window.confirm(t("history.deleteConfirm"))) return;
+    setDeleting(item.prediction_id);
+    setError("");
+    try {
+      await api.delete(`/api/predictions/${item.prediction_id}`);
+      const nextItems = items.filter((record) => record.prediction_id !== item.prediction_id);
+      setItems(nextItems);
+      setTotal((value) => Math.max(0, value - 1));
+      if (nextItems.length === 0 && page > 1) setPage((value) => value - 1);
+    } catch (requestError) {
+      setError(t(apiErrorKey(requestError)));
+    } finally {
+      setDeleting("");
+    }
   };
 
-
+  const pages = Math.max(1, Math.ceil(total / limit));
   return (
-
-    <div>
-
-      <h2 style={{marginBottom:"10px",color:"white"}}>
-        {t.history.title}
-      </h2>
-
-      <p style={styles.disclaimer}>
-        {language==="en"
-          ? "Note: Scan history is stored locally and will be deleted after 14 days."
-          : "గమనిక: స్కాన్ చరిత్ర 14 రోజుల తర్వాత స్వయంచాలకంగా తొలగించబడుతుంది."}
-      </p>
-
-      {history.length===0 && <p>{t.history.empty}</p>}
-
-      {history.map((item,index)=>{
-
-        const now = new Date();
-        const scanDate = new Date(item.date);
-
-        const diffDays = Math.floor(
-          (now - scanDate) / (1000*60*60*24)
-        );
-
-        const remaining = 14 - diffDays;
-
-        return(
-
-          <div key={index} style={styles.card}>
-
-            {item.image && (
-              <img src={item.image} style={styles.image} alt="leaf"/>
-            )}
-
-            <h3>{item.disease}</h3>
-
-            <p><b>{t.result.confidence}:</b> {item.confidence}</p>
-
-            <h4>{t.result.description}</h4>
-            <p>{item.description}</p>
-
-            <h4>{t.result.prevention}</h4>
-            <p>{item.prevention}</p>
-
-            <h4>{t.result.treatment}</h4>
-            <p>{item.treatment}</p>
-
-            <h4>{t.result.organic}</h4>
-            <p>{item.organic}</p>
-
-            {/* Fixed date display */}
-            <p>
-              <b>Date:</b> {new Date(item.date).toLocaleDateString()}
-            </p>
-
-            <p style={styles.expiry}>
-              {language==="en"
-                ? `This scan will be deleted in ${remaining} days`
-                : `ఈ స్కాన్ ${remaining} రోజుల్లో తొలగించబడుతుంది`}
-            </p>
-
-            <button
-              style={styles.deleteBtn}
-              onClick={()=>deleteScan(index)}
-            >
-              🗑 Delete
-            </button>
-
-          </div>
-
-        );
-
-      })}
-
+    <div className="page-stack">
+      <header className="page-heading page-heading--row"><div><div className="eyebrow"><span className="eyebrow-dot" />{t("history.eyebrow")}</div><h1>{t("history.title")}</h1><p>{t("history.subtitle")}</p></div><Link className="button button-primary" to="/detect">{t("home.start")}<Icon name="arrow" size={17} /></Link></header>
+      {error && <div className="inline-alert" role="alert">{error}<button className="text-button" type="button" onClick={() => { setLoading(true); setRefreshKey((value) => value + 1); }}>{t("common.retry")}</button></div>}
+      {loading ? <div className="state-panel"><span className="loading-orbit" />{t("common.loading")}</div>
+        : items.length === 0 && !error ? <div className="empty-panel"><span className="empty-icon"><Icon name="history" size={26} /></span><h2>{t("history.emptyTitle")}</h2><p>{t("history.emptyCopy")}</p><Link className="button button-primary" to="/detect">{t("history.start")}<Icon name="arrow" size={17} /></Link></div>
+          : <div className="history-list">{items.map((item) => <PredictionCard key={item.prediction_id} item={item} onDelete={remove} deleting={deleting === item.prediction_id} />)}</div>}
+      {!loading && total > limit && <div className="pagination">
+        <button className="button button-secondary" type="button" disabled={page <= 1} onClick={() => setPage((value) => value - 1)}><Icon name="back" size={16} />{t("common.back")}</button>
+        <span>{t("common.page")} {page} {t("common.of")} {pages}</span>
+        <button className="button button-secondary" type="button" disabled={page >= pages} onClick={() => setPage((value) => value + 1)}>{t("common.next")}<Icon name="arrow" size={16} /></button>
+      </div>}
     </div>
-
   );
-};
-
-const styles = {
-
-card:{
-background:"white",
-padding:"20px",
-borderRadius:"20px",
-marginBottom:"25px"
-},
-
-image:{
-width:"120px",
-borderRadius:"10px",
-marginBottom:"10px"
-},
-
-deleteBtn:{
-marginTop:"10px",
-padding:"8px 15px",
-border:"none",
-borderRadius:"20px",
-background:"#ef4444",
-color:"white",
-cursor:"pointer"
-},
-
-expiry:{
-marginTop:"10px",
-fontSize:"13px",
-color:"#6b7280"
-},
-
-disclaimer:{
-color:"#facc15",
-marginBottom:"20px",
-fontSize:"14px"
 }
-
-};
-
-export default History;

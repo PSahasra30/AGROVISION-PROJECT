@@ -1,0 +1,273 @@
+{
+  "Apple___Apple_scab": [
+    {
+      "title": "Apple scab of apples and crabapples",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/yard-and-garden-problems/apple-scab"
+    }
+  ],
+  "Apple___Black_rot": [
+    {
+      "title": "Pome fruit disease: black rot and frogeye leaf spot",
+      "organization": "Penn State Extension",
+      "url": "https://extension.psu.edu/pome-fruit-disease-black-rot-and-frogeye-leaf-spot"
+    }
+  ],
+  "Apple___Cedar_apple_rust": [
+    {
+      "title": "Cedar-apple rust and related rust diseases",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/yard-and-garden-problems/cedar-apple-rust"
+    }
+  ],
+  "Apple___healthy": [
+    {
+      "title": "Apple scab of apples and crabapples",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/yard-and-garden-problems/apple-scab"
+    }
+  ],
+  "Blueberry___healthy": [
+    {
+      "title": "Growing blueberries in the home garden",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-blueberries-in-the-home-garden"
+    }
+  ],
+  "Cherry_(including_sour)___Powdery_mildew": [
+    {
+      "title": "Cherry powdery mildew",
+      "organization": "Washington State University Tree Fruit",
+      "url": "https://treefruit.wsu.edu/crop-protection/disease-management/cherry-powdery-mildew/"
+    }
+  ],
+  "Cherry_(including_sour)___healthy": [
+    {
+      "title": "Cherry powdery mildew",
+      "organization": "Washington State University Tree Fruit",
+      "url": "https://treefruit.wsu.edu/crop-protection/disease-management/cherry-powdery-mildew/"
+    }
+  ],
+  "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": [
+    {
+      "title": "Gray leaf spot",
+      "organization": "Cornell College of Agriculture and Life Sciences",
+      "url": "https://cals.cornell.edu/field-crops/corn/diseases-of-corn/gray-leaf-spot"
+    }
+  ],
+  "Corn_(maize)___Common_rust_": [
+    {
+      "title": "Common rust on corn",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/agriculture/crop-production/corn/common-rust-on-corn"
+    }
+  ],
+  "Corn_(maize)___Northern_Leaf_Blight": [
+    {
+      "title": "Northern corn leaf blight",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/agriculture/crop-production/corn/northern-corn-leaf-blight"
+    }
+  ],
+  "Corn_(maize)___healthy": [
+    {
+      "title": "Gray leaf spot",
+      "organization": "Cornell College of Agriculture and Life Sciences",
+      "url": "https://cals.cornell.edu/field-crops/corn/diseases-of-corn/gray-leaf-spot"
+    },
+    {
+      "title": "Northern corn leaf blight",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/agriculture/crop-production/corn/northern-corn-leaf-blight"
+    }
+  ],
+  "Grape___Black_rot": [
+    {
+      "title": "Black rot on grapes",
+      "organization": "University of Minnesota Extension",
+      "url": "https://blog-fruit-vegetable-ipm.extension.umn.edu/2026/06/black-rot-on-grapes-guignardia-bidwellii.html"
+    }
+  ],
+  "Grape___Esca_(Black_Measles)": [
+    {
+      "title": "Esca (Black Measles)",
+      "organization": "University of California Statewide Integrated Pest Management Program",
+      "url": "https://ipm.ucanr.edu/agriculture/grape/esca-black-measles/"
+    }
+  ],
+  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": [
+    {
+      "title": "Leaf spots on grapes",
+      "organization": "University of Kentucky Cooperative Extension",
+      "url": "https://fruitscout.mgcafe.uky.edu/leaf-spots-grapes"
+    }
+  ],
+  "Grape___healthy": [
+    {
+      "title": "Leaf spots on grapes",
+      "organization": "University of Kentucky Cooperative Extension",
+      "url": "https://fruitscout.mgcafe.uky.edu/leaf-spots-grapes"
+    }
+  ],
+  "Orange___Haunglongbing_(Citrus_greening)": [
+    {
+      "title": "Citrus greening and Asian citrus psyllid",
+      "organization": "USDA Animal and Plant Health Inspection Service",
+      "url": "https://www.aphis.usda.gov/plant-pests-diseases/citrus-diseases/citrus-greening-and-asian-citrus-psyllid"
+    }
+  ],
+  "Peach___Bacterial_spot": [
+    {
+      "title": "Bacterial spot treatment in peaches",
+      "organization": "Alabama Cooperative Extension System",
+      "url": "https://www.aces.edu/blog/topics/crop-production/bacterial-spot-treatment-in-peaches/"
+    }
+  ],
+  "Peach___healthy": [
+    {
+      "title": "Bacterial spot treatment in peaches",
+      "organization": "Alabama Cooperative Extension System",
+      "url": "https://www.aces.edu/blog/topics/crop-production/bacterial-spot-treatment-in-peaches/"
+    }
+  ],
+  "Pepper,_bell___Bacterial_spot": [
+    {
+      "title": "Bacterial spot of tomato and pepper",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/agriculture/specialty-crops/vegetable-farming/disease-management/bacterial-spot-of-tomato-and-pepper"
+    }
+  ],
+  "Pepper,_bell___healthy": [
+    {
+      "title": "Bacterial spot of tomato and pepper",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/agriculture/specialty-crops/vegetable-farming/disease-management/bacterial-spot-of-tomato-and-pepper"
+    }
+  ],
+  "Potato___Early_blight": [
+    {
+      "title": "Early blight of potato",
+      "organization": "University of California Statewide Integrated Pest Management Program",
+      "url": "https://ipm.ucanr.edu/agriculture/potato/early-blight/"
+    }
+  ],
+  "Potato___Late_blight": [
+    {
+      "title": "Late blight of potato",
+      "organization": "University of California Statewide Integrated Pest Management Program",
+      "url": "https://ipm.ucanr.edu/agriculture/potato/late-blight/"
+    }
+  ],
+  "Potato___healthy": [
+    {
+      "title": "Late blight of potato",
+      "organization": "University of California Statewide Integrated Pest Management Program",
+      "url": "https://ipm.ucanr.edu/agriculture/potato/late-blight/"
+    }
+  ],
+  "Raspberry___healthy": [
+    {
+      "title": "Raspberry diseases",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/agriculture/specialty-crops/commercial-fruit-production/raspberry-farming/raspberry-diseases"
+    }
+  ],
+  "Soybean___healthy": [
+    {
+      "title": "Early season crop scouting",
+      "organization": "Iowa State University Extension and Outreach",
+      "url": "https://crops.extension.iastate.edu/encyclopedia/early-season-crop-scouting"
+    }
+  ],
+  "Squash___Powdery_mildew": [
+    {
+      "title": "Powdery mildew of cucurbits",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/agriculture/specialty-crops/vegetable-farming/disease-management/powdery-mildew-of-cucurbits"
+    }
+  ],
+  "Strawberry___Leaf_scorch": [
+    {
+      "title": "Growing strawberries in the home garden",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-strawberries-in-the-home-garden"
+    }
+  ],
+  "Strawberry___healthy": [
+    {
+      "title": "Growing strawberries in the home garden",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-strawberries-in-the-home-garden"
+    }
+  ],
+  "Tomato___Bacterial_spot": [
+    {
+      "title": "Bacterial spot of tomato and pepper",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/agriculture/specialty-crops/vegetable-farming/disease-management/bacterial-spot-of-tomato-and-pepper"
+    }
+  ],
+  "Tomato___Early_blight": [
+    {
+      "title": "Tomato leaf spot diseases",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/yard-and-garden-problems/tomato-leaf-spot-diseases"
+    }
+  ],
+  "Tomato___Late_blight": [
+    {
+      "title": "Late blight of tomato",
+      "organization": "University of California Statewide Integrated Pest Management Program",
+      "url": "https://ipm.ucanr.edu/agriculture/tomato/late-blight/"
+    }
+  ],
+  "Tomato___Leaf_Mold": [
+    {
+      "title": "Tomato leaf mold",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/agriculture/specialty-crops/vegetable-farming/disease-management/tomato-leaf-mold"
+    }
+  ],
+  "Tomato___Septoria_leaf_spot": [
+    {
+      "title": "Tomato leaf spot diseases",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/yard-and-garden-problems/tomato-leaf-spot-diseases"
+    }
+  ],
+  "Tomato___Spider_mites Two-spotted_spider_mite": [
+    {
+      "title": "Tomato spider mites",
+      "organization": "University of Connecticut Integrated Pest Management",
+      "url": "https://ipm.cahnr.uconn.edu/tomato-spider-mites/"
+    }
+  ],
+  "Tomato___Target_Spot": [
+    {
+      "title": "Target spot of tomato",
+      "organization": "University of Florida Institute of Food and Agricultural Sciences Extension",
+      "url": "https://ask.ifas.ufl.edu/publication/PP351"
+    }
+  ],
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": [
+    {
+      "title": "Tomato yellow leaf curl virus",
+      "organization": "University of Florida Institute of Food and Agricultural Sciences Extension",
+      "url": "https://ask.ifas.ufl.edu/publication/IN695/pdf"
+    }
+  ],
+  "Tomato___Tomato_mosaic_virus": [
+    {
+      "title": "Tomato viruses",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/agriculture/specialty-crops/vegetable-farming/disease-management/tomato-viruses"
+    }
+  ],
+  "Tomato___healthy": [
+    {
+      "title": "Growing tomatoes",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-tomatoes"
+    }
+  ]
+}

@@ -1,177 +1,76 @@
-import { motion } from "framer-motion";
-import { useContext } from "react";
-import { LanguageContext } from "../context/LanguageContext";
-import { translations } from "../translations";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { api, apiErrorKey } from "../api";
+import Icon from "../components/Icon";
+import PredictionCard from "../components/PredictionCard";
+import { useLanguage, useT } from "../context/useLanguage";
 
-const Dashboard = () => {
+const steps = [
+  ["upload", "home.step1Title", "home.step1"],
+  ["scan", "home.step2Title", "home.step2"],
+  ["sprout", "home.step3Title", "home.step3"],
+];
 
-  const { language, setLanguage } = useContext(LanguageContext);
-  const t = translations[language];
-  const navigate = useNavigate();
+export default function Dashboard() {
+  const t = useT();
+  const { language } = useLanguage();
+  const [health, setHealth] = useState(null);
+  const [recent, setRecent] = useState([]);
+  const [historyError, setHistoryError] = useState(false);
+  useEffect(() => {
+    let active = true;
+    api.get("/api/health").then(({ data }) => { if (active) setHealth(data); }).catch(() => { if (active) setHealth({ status: "degraded", components: {} }); });
+    api.get("/api/predictions/history", { params: { page: 1, limit: 3, language } })
+      .then(({ data }) => { if (active) setRecent(data.items); })
+      .catch(() => { if (active) setHistoryError(true); });
+    return () => { active = false; };
+  }, [language]);
 
+  const modelUnavailable = health && health.components?.model !== "ready";
   return (
-    <div style={styles.wrapper}>
-
-      {/* 🎥 VIDEO BACKGROUND */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        // preload="auto"
-        preload="metadata"
-        style={styles.video}
-      >
-        {/* <source src="/videos/farm.mp4" type="video/mp4" /> */}
-        {/* <source src="https://res.cloudinary.com/dm35faajj/video/upload/v1774167743/farm_1_wptx1s.mp4" type="video/mp4" /> */}
-        <source src="https://res.cloudinary.com/dm35faajj/video/upload/v1774169544/farm_1_1_lmwcsv.mp4" type="video/mp4" />
-      </video>
-
-      {/* 🌑 Dark Overlay */}
-      <div style={styles.overlay}></div>
-
-      {/* 🌍 Language Toggle */}
-      <div style={styles.langSwitch}>
-        <button onClick={() => setLanguage("en")} style={styles.langBtn}>
-          EN
-        </button>
-        <button onClick={() => setLanguage("te")} style={styles.langBtn}>
-          తెలుగు
-        </button>
-      </div>
-
-      {/* 🚀 Hero Glass Card */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.2 }}
-        style={styles.hero}
-      >
-
-        <h1 style={styles.title}>🌿 {t.hero.title}</h1>
-
-        <p style={styles.subtitle}>{t.hero.subtitle}</p>
-
-        <div style={styles.badges}>
-          <span style={styles.badge}>{t.badges.ai}</span>
-          <span style={styles.badge}>{t.badges.crops}</span>
-          <span style={styles.badge}>{t.badges.multi}</span>
-          <span style={styles.badge}>{t.badges.realtime}</span>
+    <div className="page-stack">
+      {modelUnavailable && <div className="system-banner"><span className="banner-indicator" /><span><strong>{t("common.backendUnavailable")}</strong><small>{t("errors.modelUnavailable")}</small></span></div>}
+      <section className="hero-panel">
+        <div className="hero-copy">
+          <div className="eyebrow"><span className="eyebrow-dot" />{t("home.eyebrow")}</div>
+          <h1>{t("home.title")}</h1>
+          <p>{t("home.subtitle")}</p>
+          <div className="hero-actions">
+            <Link className="button button-primary" to="/detect">{t("home.start")}<Icon name="arrow" size={18} /></Link>
+            <Link className="button button-quiet" to="/history">{t("home.history")}</Link>
+          </div>
+          <div className="hero-coverage"><Icon name="check" size={15} />{t("home.coverage")}</div>
         </div>
+        <div className="hero-illustration" aria-hidden="true">
+          <div className="illustration-orbit orbit-one" /><div className="illustration-orbit orbit-two" />
+          <div className="leaf-plate"><Icon name="leaf" size={87} /></div>
+          <span className="illustration-tag tag-top"><Icon name="scan" size={15} /> 38 classes</span>
+          <span className="illustration-tag tag-bottom"><span className="eyebrow-dot" /> Image analysis</span>
+        </div>
+      </section>
 
-        <button
-          style={styles.cta}
-          onClick={() => navigate("/detect")}
-        >
-          🚀 {t.hero.start}
-        </button>
+      <section className="metrics-row" aria-label={t("home.evaluationTitle")}>
+        <div className="metric-card"><span>{t("home.accuracy")}</span><strong>97.82%</strong><small>{t("home.modelName")}</small></div>
+        <div className="metric-card"><span>{t("home.top3")}</span><strong>99.85%</strong><small>{t("home.testSamples")}: 8,154</small></div>
+        <div className="metric-card metric-card--baseline"><span>{t("home.baseline")}</span><strong>97.15%</strong><small>{t("home.accuracy")}</small></div>
+      </section>
+      <p className="metrics-footnote">{t("home.metricNote")}</p>
 
-      </motion.div>
+      <section className="workflow-section">
+        <div className="section-heading"><div><div className="section-kicker">{t("home.modelLabel")}</div><h2>{t("home.modelName")}</h2></div><span className="model-chip">PlantVillage · 38</span></div>
+        <div className="workflow-grid">
+          {steps.map(([icon, title, body], index) => <article className="workflow-card" key={title}>
+            <div className="workflow-index">0{index + 1}</div><span className="workflow-icon"><Icon name={icon} size={20} /></span>
+            <h3>{t(title)}</h3><p>{t(body)}</p>
+          </article>)}
+        </div>
+      </section>
 
+      <section className="recent-section">
+        <div className="section-heading"><div><div className="section-kicker">{t("home.recent")}</div><h2>{t("history.title")}</h2></div><Link className="text-link" to="/history">{t("home.history")}<Icon name="arrow" size={16} /></Link></div>
+        {recent.length ? <div className="history-list">{recent.map((item) => <PredictionCard key={item.prediction_id} item={item} />)}</div>
+          : <div className="quiet-empty"><Icon name="history" size={20} /><span>{historyError ? t(apiErrorKey({ response: { status: 503 } })) : t("home.noRecent")}</span></div>}
+      </section>
     </div>
   );
-};
-
-const styles = {
-  wrapper: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    width: "100vw",
-    height: "100vh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    zIndex: 0
-  },
-
-  video: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    width: "100vw",
-    height: "100vh",
-    objectFit: "cover",
-    zIndex: -2
-  },
-
-  overlay: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    width: "100vw",
-    height: "100vh",
-    background: "rgba(0,0,0,0.6)",
-    zIndex: -1
-  },
-
-  langSwitch: {
-    position: "absolute",
-    top: 20,
-    right: 30,
-    display: "flex",
-    gap: "10px",
-    zIndex: 10
-  },
-
-  langBtn: {
-    padding: "6px 12px",
-    borderRadius: "20px",
-    border: "1px solid white",
-    background: "transparent",
-    color: "white",
-    cursor: "pointer"
-  },
-
-  hero: {
-    backdropFilter: "blur(20px)",
-    background: "rgba(255,255,255,0.1)",
-    padding: "60px",
-    borderRadius: "30px",
-    textAlign: "center",
-    color: "white",
-    width: "90%",
-    maxWidth: "900px",
-    boxShadow: "0 25px 60px rgba(0,0,0,0.4)"
-  },
-
-  title: {
-    fontSize: "50px",
-    marginBottom: "20px"
-  },
-
-  subtitle: {
-    fontSize: "20px",
-    marginBottom: "30px",
-    opacity: 0.9
-  },
-
-  badges: {
-    display: "flex",
-    justifyContent: "center",
-    gap: "15px",
-    flexWrap: "wrap",
-    marginBottom: "40px"
-  },
-
-  badge: {
-    padding: "8px 18px",
-    borderRadius: "30px",
-    background: "rgba(255,255,255,0.2)",
-    fontSize: "14px"
-  },
-
-  cta: {
-    padding: "16px 40px",
-    borderRadius: "40px",
-    border: "none",
-    fontSize: "18px",
-    fontWeight: "bold",
-    cursor: "pointer",
-    background: "white",
-    color: "#065f46"
-  }
-};
-
-export default Dashboard;
+}

@@ -1,0 +1,123 @@
+{
+  "status": "design-only; no model training has been run",
+  "dataset_config": "ml/configs/plantvillage.json",
+  "split_manifest": "ml/splits/plantvillage_seed42.csv",
+  "shared_protocol": {
+    "seed": 42,
+    "input_size": [
+      224,
+      224
+    ],
+    "batch_size": 16,
+    "loss": "sparse_categorical_crossentropy",
+    "class_imbalance": "compute balanced class weights from train partition and reuse across candidates",
+    "augmentation_train_only": {
+      "horizontal_flip_probability": 0.5,
+      "rotation_factor": 0.04,
+      "translation_fraction": 0.05,
+      "zoom_fraction": 0.1,
+      "color_augmentation": "none initially"
+    },
+    "stages": [
+      {
+        "name": "frozen_backbone",
+        "max_epochs": 5,
+        "head_learning_rate": 0.001
+      },
+      {
+        "name": "controlled_fine_tuning",
+        "max_epochs": 25,
+        "unfreeze": "upper 30%; keep BN statistics frozen",
+        "learning_rate": 1e-05
+      }
+    ],
+    "callbacks": {
+      "early_stopping": {
+        "monitor": "val_loss",
+        "patience": 5,
+        "restore_best_weights": true
+      },
+      "reduce_lr_on_plateau": {
+        "monitor": "val_loss",
+        "factor": 0.2,
+        "patience": 2,
+        "min_lr": 1e-07
+      },
+      "checkpoint": "best validation-loss checkpoint"
+    },
+    "metrics": [
+      "accuracy",
+      "precision",
+      "recall",
+      "macro_f1",
+      "weighted_f1",
+      "per_class_precision_recall_f1",
+      "confusion_matrix",
+      "top_3_accuracy",
+      "parameter_count",
+      "model_file_size",
+      "batch_1_cpu_inference_latency"
+    ],
+    "test_policy": "Do not train, tune, threshold-select, or choose candidates with test results; evaluate once after model choice is frozen."
+  },
+  "baseline": {
+    "name": "MobileNetV2",
+    "weights": "imagenet",
+    "include_top": false,
+    "head": [
+      "GlobalAveragePooling2D",
+      "BatchNormalization",
+      "Dense(256,relu)",
+      "Dropout(0.5)",
+      "Dense(38,softmax)"
+    ],
+    "input_normalization": "shared external [-1,1]"
+  },
+  "enhanced_candidates": [
+    {
+      "name": "EfficientNetV2B0_control",
+      "role": "control without added attention",
+      "weights": "imagenet",
+      "include_top": false,
+      "include_preprocessing": false,
+      "head": [
+        "GlobalAveragePooling2D",
+        "BatchNormalization",
+        "Dense(256,relu)",
+        "Dropout(0.5)",
+        "Dense(38,softmax)"
+      ]
+    },
+    {
+      "name": "EfficientNetV2B0_ECA",
+      "role": "primary enhanced candidate",
+      "change": "one lightweight ECA channel-attention block before pooling"
+    },
+    {
+      "name": "EfficientNetV2B0_ECA_spatial",
+      "role": "optional ablation",
+      "change": "add spatial attention only if channel attention merits extra cost"
+    }
+  ],
+  "complexity_policy": {
+    "extra_residual_or_depthwise_blocks": "not added by default; consider only as isolated validation/latency ablations",
+    "final_architecture": "select using validation results and measured size/latency; no outcome assumed"
+  },
+  "subset_fallback": {
+    "applied": false,
+    "condition": "only if full-data CPU training exceeds the agreed runtime budget",
+    "proposal": "after fixed split, cap training at 500 examples/class with seed 42; keep full validation/test and use the same selected rows for every model"
+  },
+  "artifacts": [
+    "agrovision_model.keras",
+    "optional agrovision_model.h5",
+    "class_labels.json",
+    "preprocessing_config.json",
+    "model_metadata.json",
+    "training_config.json",
+    "evaluation_metrics.json",
+    "confusion_matrix.csv",
+    "per_class_metrics.csv",
+    "baseline_vs_enhanced.json"
+  ]
+}
